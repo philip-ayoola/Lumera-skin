@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMERA SKIN</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ffe6da,#ffd1bb,#fff1ea);
+    color:#4a2c22;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:25px;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:5px;
+    color:#6b2f22;
+}
+
+/* HERO SECTION */
+.hero{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:40px 20px;
+}
+
+/* MODEL CARDS */
+.model{
+    width:280px;
+    text-align:center;
+    animation:float 5s ease-in-out infinite;
+}
+
+.model img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+    transition:0.4s;
+}
+
+.model img:hover{
+    transform:scale(1.05);
+}
+
+.model p{
+    margin-top:10px;
+    font-weight:500;
+}
+
+/* CENTER PRODUCT */
+.product{
+    text-align:center;
+    max-width:420px;
+    padding:20px;
+}
+
+.product h1{
+    font-size:45px;
+    color:#7a3a2b;
+}
+
+.product p{
+    margin-top:10px;
+    font-size:15px;
+    color:#6b4a3d;
+}
+
+/* CREME GLOW EFFECT */
+.cream{
+    width:220px;
+    height:220px;
+    margin:25px auto;
+    border-radius:50%;
+    background: radial-gradient(circle,#fff,#f7c3ae,#e99a7d);
+    box-shadow:0 0 50px rgba(255,140,100,0.5);
+    animation:pulse 2.5s infinite;
+}
+
+/* BUTTON */
+button{
+    margin-top:15px;
+    padding:12px 28px;
+    border:none;
+    background:#6b2f22;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+button:hover{
+    background:#a44a36;
+    transform:scale(1.05);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0px);}
+}
+
+/* PULSE */
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
+/* FEATURES */
+.features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:50px 20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    width:220px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>LUMERA SKIN</header>
+
+<section class="hero">
+
+    <!-- LEFT MODEL -->
+    <div class="model">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="model1">
+        <p>Radiant Glow Ambassador</p>
+    </div>
+
+    <!-- PRODUCT CENTER -->
+    <div class="product">
+        <h1>Luxury Glow Cream</h1>
+
+        <div class="cream"></div>
+
+        <p>
+            Advanced hydrating skincare formula designed to brighten,
+            smooth and restore your natural glow.
+        </p>
+
+        <button onclick="buy()">Shop Now</button>
+    </div>
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="card">
+        <h3>💧 Deep Hydration</h3>
+        <p>Locks moisture for 24-hour glow.</p>
+    </div>
+
+    <div class="card">
+        <h3>✨ Skin Brightening</h3>
+        <p>Evens tone and enhances radiance.</p>
+    </div>
+
+    <div class="card">
+        <h3>🌿 Natural Ingredients</h3>
+        <p>Safe botanical skincare formula.</p>
+    </div>
+
+</section>
+
+<footer>
+© 2026 LUMERA SKIN • All Rights Reserved
+</footer>
+
+<script>
+function buy(){
+    alert("Welcome to LUMERA SKIN ✨ Your glow journey starts now!");
+}
+</script>
+
+</body>
+</html>
