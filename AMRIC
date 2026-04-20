@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AMRIC Luxury Store</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0F1115;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAV */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+header.glass {
+  background: rgba(15,17,21,0.75);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 40px 60px;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+}
+
+.hero-text p {
+  color: #aaa;
+}
+
+.hero-img img {
+  width: 420px;
+  filter: drop-shadow(0 0 40px red);
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-red {
+  background: red;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 80px 40px;
+  gap: 20px;
+}
+
+.card {
+  background: #15171c;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 80px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  background: #15171c;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CATEGORY */
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 80px 40px;
+  gap: 20px;
+}
+
+.cat {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.cat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat div {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STORY */
+.story {
+  display: flex;
+  padding: 80px 40px;
+  gap: 40px;
+  align-items: center;
+}
+
+.story img {
+  width: 420px;
+  border-radius: 12px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 90px;
+  background: linear-gradient(to right, black, #1a0000, black);
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 40px;
+  border-top: 1px solid #222;
+  color: #aaa;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero, .story {
+    flex-direction: column;
+  }
+
+  .hero-text, .hero-img {
+    width: 100%;
+  }
+
+  .grid, .features, .category, footer {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="logo">
+    <img src="images/logo.jpg" onerror="this.src='https://via.placeholder.com/42'">
+    <h2>AMRIC</h2>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Collections</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div>🔍 🛒 👤</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Define Your Identity with AMRIC</h1>
+    <p>Luxury fashion built for modern confidence.</p>
+
+    <button class="btn btn-red">Shop Collection</button>
+    <button class="btn btn-outline">Explore</button>
+  </div>
+
+  <div class="hero-img">
+    <img src="images/logo.jpg" onerror="this.src='https://via.placeholder.com/420'">
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="card">Premium Quality</div>
+  <div class="card">Global Shipping</div>
+  <div class="card">Secure Checkout</div>
+  <div class="card">Fast Delivery</div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <h2>Trending Collection</h2>
+
+  <div class="grid">
+    <div class="product">
+      <img src="images/cloth1.png" onerror="this.src='https://via.placeholder.com/300'">
+      <h3>AMRIC Wear</h3>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/cloth2.png" onerror="this.src='https://via.placeholder.com/300'">
+      <h3>AMRIC Jacket</h3>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/cloth1.png" onerror="this.src='https://via.placeholder.com/300'">
+      <h3>AMRIC Limited</h3>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY -->
+<section class="category">
+  <div class="cat">
+    <img src="images/cloth1.png" onerror="this.src='https://via.placeholder.com/400'">
+    <div>Streetwear</div>
+  </div>
+
+  <div class="cat">
+    <img src="images/cloth2.png" onerror="this.src='https://via.placeholder.com/400'">
+    <div>Accessories</div>
+  </div>
+
+  <div class="cat">
+    <img src="images/cloth1.png" onerror="this.src='https://via.placeholder.com/400'">
+    <div>Limited Edition</div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div>
+    <h2>About AMRIC</h2>
+    <p style="color:#aaa;">Luxury fashion identity built on precision and elegance.</p>
+  </div>
+
+  <img src="images/logo.jpg" onerror="this.src='https://via.placeholder.com/420'">
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Join the AMRIC Movement</h2>
+  <button class="btn btn-red">Start Shopping</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>AMRIC</div>
+  <div>Shop</div>
+  <div>Support</div>
+  <div>Social</div>
+</footer>
+
+<script>
+// NAV EFFECT
+window.addEventListener("scroll", () => {
+  document.getElementById("nav").classList.toggle("glass", window.scrollY > 50);
+});
+
+// ADD TO CART
+document.querySelectorAll("button").forEach(btn => {
+  if(btn.innerText === "Add to Cart"){
+    btn.addEventListener("click", () => {
+      btn.innerText = "Added ✔";
+      btn.style.background = "green";
+
+      setTimeout(() => {
+        btn.innerText = "Add to Cart";
+        btn.style.background = "red";
+      }, 1500);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
