@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMÉRA | Korean-inspired Skincare</title>
+<meta name="description" content="LUMÉRA skincare: Revitalize hair & body lotion, Anti-Melasma & Brightening Serum, and Night Cream.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#FBEDEA; --cream:#FFF8F5; --card:#FFFFFF;
+  --rose:#B5495B; --rose-dark:#8C3548; --gold:#C9A15E;
+  --ink:#3F2A2E; --muted:#7A5F62; --line:#F0DCD8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Poppins','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,248,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:.06em;text-decoration:none;color:var(--rose-dark)}
+nav ul{display:flex;gap:32px;list-style:none}
+nav ul a{text-decoration:none;font-size:14px;letter-spacing:.03em;color:var(--muted);transition:color .2s}
+nav ul a:hover{color:var(--rose)}
+.btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;transition:transform .2s,background .2s}
+.btn-primary{background:var(--rose);color:#fff}
+.btn-primary:hover{background:var(--rose-dark);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--rose-dark)}
+.btn-ghost:hover{background:var(--rose-dark);color:#fff}
+
+/* hero */
+.hero{padding:70px 0 90px;background:radial-gradient(circle at 80% 20%,var(--blush),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--gold);font-weight:600;text-transform:uppercase}
+.hero h1{margin-top:14px;font-size:clamp(42px,5.6vw,68px);color:var(--rose-dark)}
+.hero p.lead{margin-top:18px;max-width:46ch;color:var(--muted);font-size:17px}
+.cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+.hero-photo{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 24px 50px rgba(140,53,72,.18)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* sections */
+section{padding:86px 0}
+.head{max-width:600px;margin:0 auto 48px;text-align:center}
+.head .eyebrow{display:block;margin-bottom:10px}
+.head h2{font-size:clamp(30px,4vw,42px);color:var(--rose-dark)}
+.head p{margin-top:12px;color:var(--muted)}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.product-card{background:var(--card);border-radius:20px;overflow:hidden;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(140,53,72,.14)}
+.product-photo{aspect-ratio:4/5;overflow:hidden;background:var(--blush)}
+.product-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.product-body{padding:24px 24px 28px;flex:1;display:flex;flex-direction:column}
+.product-body h3{font-size:24px;color:var(--rose-dark)}
+.product-body .sub{font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:4px}
+.product-body p{margin-top:12px;color:var(--muted);font-size:15px;flex:1}
+.price-row{margin-top:18px;display:flex;align-items:center;justify-content:space-between}
+.price{font-family:var(--serif);font-size:22px;color:var(--rose-dark);font-weight:600}
+.mini-btn{padding:10px 20px;border-radius:999px;background:var(--rose);color:#fff;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s}
+.mini-btn:hover{background:var(--rose-dark)}
+
+/* why */
+.why{background:var(--blush);border-radius:32px;margin:0 16px}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-item{text-align:center;padding:8px}
+.why-item .ic{font-size:30px}
+.why-item h3{margin-top:14px;font-size:19px;color:var(--rose-dark)}
+.why-item p{margin-top:8px;color:var(--muted);font-size:14px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-grid img{width:100%;border-radius:20px;object-fit:cover;aspect-ratio:1/1}
+.about-grid p{color:var(--muted);margin-top:14px}
+
+/* order */
+.order-box{background:var(--rose-dark);color:#fff;border-radius:28px;padding:64px 44px;text-align:center}
+.order-box h2{color:#fff;font-size:clamp(30px,4.6vw,46px)}
+.order-box p{margin:16px auto 28px;max-width:44ch;color:#F3D8DD}
+.order-box .btn-primary{background:#fff;color:var(--rose-dark)}
+.order-box .btn-primary:hover{background:var(--gold);color:#fff}
+.order-links{margin-top:22px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:14px}
+.order-links a{text-decoration:underline;text-underline-offset:4px}
+
+footer{text-align:center;padding:34px 0 44px;color:var(--muted);font-size:14px}
+
+@media (max-width:880px){
+  nav ul{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding:44px 0 60px}
+  .products{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .order-box{padding:44px 24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">LUMÉRA</a>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#why">Why Lumera</a></li>
+        <li><a href="#about">Our Story</a></li>
+      </ul>
+      <a class="btn btn-primary" href="#order" style="padding:10px 22px;font-size:14px">Order Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Brilliance in every drop</span>
+        <h1>Skincare that gives your skin the care it deserves</h1>
+        <p class="lead">LUMÉRA blends nourishing botanicals with proven actives to hydrate, brighten and restore your natural glow, from body to face.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#products">Shop the range</a>
+          <a class="btn btn-ghost" href="#order">Order now</a>
+        </div>
+      </div>
+      <!-- Photo: save the tube photo as product1.jpg in this repository -->
+      <div class="hero-photo">
+        <img src="product1.jpg" alt="LUMÉRA Revitalize hair and body lotion">
+      </div>
+    </div>
+  </div>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">The range</span>
+        <h2>Three essentials, one routine</h2>
+        <p>Every LUMÉRA product is designed to work together, from daily hydration to overnight repair.</p>
+      </div>
+      <div class="products">
+
+        <!-- Photo: save the tube photo as product1.jpg -->
+        <article class="product-card">
+          <div class="product-photo"><img src="product1.jpg" alt="LUMÉRA Revitalize hair and body lotion"></div>
+          <div class="product-body">
+            <div class="sub">Daily hydration</div>
+            <h3>Revitalize Hair &amp; Body Lotion</h3>
+            <p>A lightweight, fast-absorbing lotion that hydrates hair and skin from root to tip, leaving both feeling soft and revitalised.</p>
+            <div class="price-row">
+              <span class="price">₦0,000</span>
+              <a class="mini-btn" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo: save the serum bottle photo as product2.jpg -->
+        <article class="product-card">
+          <div class="product-photo"><img src="product2.jpg" alt="LUMÉRA Anti-Melasma and Brightening Serum"></div>
+          <div class="product-body">
+            <div class="sub">Multi-correction</div>
+            <h3>Anti-Melasma &amp; Brightening Serum</h3>
+            <p>A concentrated 10ml serum that targets stubborn pigmentation and boosts radiance, for a brighter, more even complexion.</p>
+            <div class="price-row">
+              <span class="price">₦0,000</span>
+              <a class="mini-btn" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo: save the pink jar photo as product3.jpg -->
+        <article class="product-card">
+          <div class="product-photo"><img src="product3.jpg" alt="LUMÉRA Night Cream, 50g"></div>
+          <div class="product-body">
+            <div class="sub">Nighttime essential</div>
+            <h3>Night Cream</h3>
+            <p>Rich, deeply moisturising cream that nourishes skin overnight, so you wake up to a softer, smoother, refreshed complexion. 50g / 1.76oz.</p>
+            <div class="price-row">
+              <span class="price">₦0,000</span>
+              <a class="mini-btn" href="#order">Order</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="why">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Why Lumera</span>
+        <h2>Wake up. Refresh. Glow.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><div class="ic">💧</div><h3>Deep hydration</h3><p>Locks in moisture for lasting comfort.</p></div>
+        <div class="why-item"><div class="ic">✨</div><h3>Visible brightening</h3><p>Fades pigmentation, evens tone.</p></div>
+        <div class="why-item"><div class="ic">🌙</div><h3>Overnight repair</h3><p>Nourishes while you sleep.</p></div>
+        <div class="why-item"><div class="ic">🌿</div><h3>Gentle formulas</h3><p>Safe, botanical-based ingredients.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <!-- Photo: reuse product2.jpg or add a fourth image, e.g. about.jpg -->
+      <img src="product2.jpg" alt="LUMÉRA Anti-Melasma and Brightening Serum">
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2>Beautiful skin isn't about perfection</h2>
+        <p>It's about giving your skin the care it deserves. LUMÉRA was created around that idea: simple, effective routines that fit real life, using formulas that hydrate, brighten and restore, morning and night.</p>
+        <p>Every product is made to work with your skin, not against it, so results feel gradual, natural and lasting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" style="padding-top:20px">
+    <div class="wrap">
+      <div class="order-box">
+        <h2>Ready to glow?</h2>
+        <p>Message us to place an order or ask a question about which product is right for you.</p>
+        <a class="btn btn-primary" href="https://wa.me/2340000000000">Order on WhatsApp</a>
+        <div class="order-links">
+          <a href="https://instagram.com/your-handle">Instagram</a>
+          <a href="mailto:hello@lumeraskin.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> LUMÉRA Skincare. All rights reserved.</div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
